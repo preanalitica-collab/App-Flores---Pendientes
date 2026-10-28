@@ -1,0 +1,8 @@
+{
+  "name": "Remix Confiabilidad del Laboratorio - Plazos de Entrega",
+  "description": "Sistema de gestión ejecutiva y monitoreo de plazos de entrega, causas de demora y confiabilidad analítica bajo estándares ISO 9001 e ISO 15189:2022.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

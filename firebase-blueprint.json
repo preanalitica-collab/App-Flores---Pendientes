@@ -1,0 +1,80 @@
+{
+  "version": 1,
+  "collections": {
+    "deliveries": {
+      "description": "Entregas diarias procesadas por fecha ISO (ej: 2026-08-18)",
+      "fields": {
+        "fechaISO": { "type": "string" },
+        "fechaCarga": { "type": "string" },
+        "usuarioCarga": { "type": "string" },
+        "nombreArchivo": { "type": "string" },
+        "tamanoArchivo": { "type": "string" },
+        "contenidoOriginal": { "type": "string" },
+        "totalFilas": { "type": "number" },
+        "practicasValidas": { "type": "number" },
+        "practicasListas": { "type": "number" },
+        "practicasNoListas": { "type": "number" },
+        "porcentajeCumplimiento": { "type": "number" },
+        "intradayRecords": { "type": "array" }
+      }
+    },
+    "observations": {
+      "description": "Observaciones operativas asociadas a una práctica y orden de servicio",
+      "fields": {
+        "id": { "type": "string" },
+        "os": { "type": "string" },
+        "estudio": { "type": "string" },
+        "texto": { "type": "string" },
+        "fechaHora": { "type": "string" },
+        "modificadoPor": { "type": "string" },
+        "fechaISO": { "type": "string" }
+      }
+    },
+    "monthly_periods": {
+      "description": "Datos maestros mensuales consolidados e históricos",
+      "fields": {
+        "dataset": { "type": "map" },
+        "updatedAt": { "type": "string" },
+        "updatedBy": { "type": "string" }
+      }
+    },
+    "files_history": {
+      "description": "Historial de auditoría de todos los archivos y cargas realizadas",
+      "fields": {
+        "id": { "type": "string" },
+        "nombreArchivo": { "type": "string" },
+        "tamanoArchivo": { "type": "string" },
+        "fechaISO": { "type": "string" },
+        "fechaCarga": { "type": "string" },
+        "usuarioCarga": { "type": "string" },
+        "tipo": { "type": "string" },
+        "totalRegistros": { "type": "number" }
+      }
+    },
+    "tat_breaches": {
+      "description": "Casos de seguimiento TAT e incumplimientos operativos con persistencia multiusuario de observaciones",
+      "fields": {
+        "id": { "type": "string" },
+        "os": { "type": "string" },
+        "idPacienteAnon": { "type": "string" },
+        "practica": { "type": "string" },
+        "sede": { "type": "string" },
+        "sector": { "type": "string" },
+        "fechaPrometida": { "type": "string" },
+        "statusLIS": { "type": "string" },
+        "tiempoAtrasoDias": { "type": "number" },
+        "estadoSeguimiento": { "type": "string" },
+        "observacion": { "type": "string" },
+        "observaciones": { "type": "string" },
+        "autorObservacion": { "type": "string" },
+        "fechaObservacion": { "type": "string" },
+        "historialObservaciones": { "type": "array" },
+        "historialSeguimiento": { "type": "array" },
+        "fechaDeteccion": { "type": "string" },
+        "fechaCierre": { "type": "string" },
+        "usuarioCierre": { "type": "string" },
+        "updatedAtServer": { "type": "string" }
+      }
+    }
+  }
+}
